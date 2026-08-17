@@ -1,0 +1,46 @@
+[
+    {
+        "id": "quiz",
+        "name": "Quick Quiz",
+        "description": "Test your knowledge with fast and challenging questions.",
+        "icon": "🧠",
+        "url": "games/quiz.php",
+        "category": "Knowledge",
+        "difficulty": "Medium",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "tic-tac-toe",
+        "name": "Tic Tac Toe",
+        "description": "Challenge the computer in the classic X and O battle.",
+        "icon": "⭕",
+        "url": "games/tic-tac-toe.php",
+        "category": "Strategy",
+        "difficulty": "Easy",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "memory",
+        "name": "Memory Match",
+        "description": "Flip cards and match all the hidden pairs.",
+        "icon": "🧩",
+        "url": "games/memory.php",
+        "category": "Puzzle",
+        "difficulty": "Medium",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "guess",
+        "name": "Guess It",
+        "description": "Can you find the secret number before running out of attempts?",
+        "icon": "🎯",
+        "url": "games/guess.php",
+        "category": "Challenge",
+        "difficulty": "Easy",
+        "players": "1 Player",
+        "status": "active"
+    }
+]

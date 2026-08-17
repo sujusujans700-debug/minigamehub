@@ -1,0 +1,132 @@
+[
+    {
+        "id": 1,
+        "question": "Which language is used to style web pages?",
+        "category": "Web Development",
+        "options": [
+            "HTML",
+            "CSS",
+            "PHP",
+            "JSON"
+        ],
+        "answer": 1,
+        "difficulty": "Easy"
+    },
+    {
+        "id": 2,
+        "question": "Which language is mainly used to add interactivity to a webpage?",
+        "category": "Web Development",
+        "options": [
+            "CSS",
+            "HTML",
+            "JavaScript",
+            "JSON"
+        ],
+        "answer": 2,
+        "difficulty": "Easy"
+    },
+    {
+        "id": 3,
+        "question": "What does PHP stand for?",
+        "category": "Programming",
+        "options": [
+            "Personal Home Page",
+            "PHP: Hypertext Preprocessor",
+            "Private Home Processor",
+            "Program Hypertext Page"
+        ],
+        "answer": 1,
+        "difficulty": "Medium"
+    },
+    {
+        "id": 4,
+        "question": "Which format is commonly used to store structured data?",
+        "category": "Programming",
+        "options": [
+            "JPG",
+            "MP3",
+            "JSON",
+            "PNG"
+        ],
+        "answer": 2,
+        "difficulty": "Easy"
+    },
+    {
+        "id": 5,
+        "question": "Which HTML tag is used to create a hyperlink?",
+        "category": "HTML",
+        "options": [
+            "<link>",
+            "<a>",
+            "<href>",
+            "<url>"
+        ],
+        "answer": 1,
+        "difficulty": "Easy"
+    },
+    {
+        "id": 6,
+        "question": "Which CSS property changes the text color?",
+        "category": "CSS",
+        "options": [
+            "font-color",
+            "text-color",
+            "color",
+            "foreground"
+        ],
+        "answer": 2,
+        "difficulty": "Easy"
+    },
+    {
+        "id": 7,
+        "question": "Which symbol is used for a JavaScript single-line comment?",
+        "category": "JavaScript",
+        "options": [
+            "<!--",
+            "//",
+            "#",
+            "/*"
+        ],
+        "answer": 1,
+        "difficulty": "Easy"
+    },
+    {
+        "id": 8,
+        "question": "Which keyword declares a constant in JavaScript?",
+        "category": "JavaScript",
+        "options": [
+            "var",
+            "let",
+            "constant",
+            "const"
+        ],
+        "answer": 3,
+        "difficulty": "Medium"
+    },
+    {
+        "id": 9,
+        "question": "Which PHP function is used to start a session?",
+        "category": "PHP",
+        "options": [
+            "start_session()",
+            "session_start()",
+            "begin_session()",
+            "session_begin()"
+        ],
+        "answer": 1,
+        "difficulty": "Medium"
+    },
+    {
+        "id": 10,
+        "question": "Which technology is responsible for the structure of a webpage?",
+        "category": "Web Development",
+        "options": [
+            "CSS",
+            "JavaScript",
+            "HTML",
+            "PHP"
+        ],
+        "answer": 2,
+        "difficulty": "Easy"
+    }
+]
