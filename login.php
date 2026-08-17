@@ -2,6 +2,12 @@
 
 require_once __DIR__ . "/php/auth.php";
 
+// If already logged in, go straight to dashboard
+if (isLoggedIn()) {
+    header("Location: dashboard.php");
+    exit;
+}
+
 $error = "";
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -10,49 +16,36 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password = $_POST["password"] ?? "";
 
     if ($email === "" || $password === "") {
-
         $error = "Please enter your email and password.";
-
-    } elseif (loginUser($email, $password)) {
-
-        header("Location: dashboard.php");
-        exit;
-
     } else {
+        $result = loginUser($email, $password);
 
-        $error = "Invalid email or password.";
+        if ($result["success"]) {
+            header("Location: dashboard.php");
+            exit;
+        } else {
+            $error = $result["message"] ?? "Invalid email or password.";
+        }
     }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | MiniGameHub</title>
-
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/auth.css">
-
 </head>
 
 <body class="auth-page">
 
-
 <div class="auth-wrapper">
 
-
     <div class="auth-info">
-
         <a href="index.php" class="logo">
             MINI<span>GAME</span>HUB
         </a>
@@ -70,59 +63,41 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             Your next challenge is waiting.
             Sign in and continue playing.
         </p>
-
     </div>
 
-
     <div class="auth-card">
-
         <div class="auth-top">
-
             <span class="status-dot"></span>
-
             PLAYER LOGIN
-
         </div>
 
-        <h2>
-            Let's play.
-        </h2>
+        <h2>Let's play.</h2>
 
         <p class="auth-description">
             Sign in to your MiniGameHub account.
         </p>
 
-
         <?php if ($error): ?>
-
             <div class="error-message">
                 <?= htmlspecialchars($error) ?>
             </div>
-
         <?php endif; ?>
 
-
-        <form method="POST">
-
-
+        <form method="POST" action="login.php">
             <label>
                 EMAIL
-
                 <input
                     type="email"
                     name="email"
                     placeholder="you@example.com"
+                    value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
                     required
                 >
-
             </label>
-
 
             <label>
                 PASSWORD
-
                 <div class="password-box">
-
                     <input
                         type="password"
                         name="password"
@@ -130,18 +105,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         placeholder="Enter password"
                         required
                     >
-
                     <button
                         type="button"
                         onclick="togglePassword()"
                     >
                         SHOW
                     </button>
-
                 </div>
-
             </label>
-
 
             <button
                 type="submit"
@@ -150,14 +121,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 LOGIN
                 <span>→</span>
             </button>
-
         </form>
-
 
         <div class="auth-divider">
             NEW PLAYER?
         </div>
-
 
         <a
             href="register.php"
@@ -166,43 +134,29 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             CREATE AN ACCOUNT →
         </a>
 
-
         <a
             href="index.php"
             class="back-home"
         >
             ← Back to Home
         </a>
-
     </div>
 
 </div>
 
-
 <script>
-
 function togglePassword() {
-
-    const password =
-        document.getElementById("password");
-
-    const button =
-        event.target;
+    const password = document.getElementById("password");
+    const button = event.target;
 
     if (password.type === "password") {
-
         password.type = "text";
-
         button.textContent = "HIDE";
-
     } else {
-
         password.type = "password";
-
         button.textContent = "SHOW";
     }
 }
-
 </script>
 
 </body>

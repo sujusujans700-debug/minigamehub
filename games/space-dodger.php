@@ -11,7 +11,7 @@ requireLogin();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe | MiniGameHub</title>
+    <title>Space Dodger | MiniGameHub</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/games.css">
 </head>
@@ -37,62 +37,55 @@ requireLogin();
 
     <div class="game-top">
         <a href="../games.php">← BACK TO GAMES</a>
-        <span>❌⭕ TIC-TAC-TOE</span>
+        <span>🚀 SPACE DODGER</span>
     </div>
 
-    <div class="ttt-card">
+    <div class="space-card">
         <div class="game-title">
-            <p>PLAYER VS SMART AI</p>
-            <h1>Tic-Tac-Toe</h1>
-            <div id="gameStatus" class="game-status">
-                Your turn (You are X)
-            </div>
-        </div>
-
-        <div id="board" class="tic-board">
-            <button data-index="0"></button>
-            <button data-index="1"></button>
-            <button data-index="2"></button>
-
-            <button data-index="3"></button>
-            <button data-index="4"></button>
-            <button data-index="5"></button>
-
-            <button data-index="6"></button>
-            <button data-index="7"></button>
-            <button data-index="8"></button>
+            <p>SURVIVE THE ASTEROID BELT</p>
+            <h1>Space Dodger</h1>
         </div>
 
         <div class="game-score">
             <div>
-                <span>YOU (X)</span>
-                <strong id="playerScore">0</strong>
+                <span>DISTANCE</span>
+                <strong id="spaceScore">0</strong>
             </div>
 
             <div>
-                <span>DRAW</span>
-                <strong id="drawScore">0</strong>
+                <span>STARS COLLECTED</span>
+                <strong id="spaceStars" style="color:#ffd700;">0</strong>
             </div>
 
             <div>
-                <span>COMPUTER (O)</span>
-                <strong id="computerScore">0</strong>
+                <span>BEST SCORE</span>
+                <strong id="spaceBest">0</strong>
             </div>
         </div>
 
-        <div style="display:flex; gap:12px; justify-content:center;">
-            <button id="restartBtn" class="game-btn">
-                PLAY NEXT ROUND
-            </button>
+        <div class="space-arena">
+            <canvas id="spaceCanvas" width="400" height="480"></canvas>
+
+            <div id="spaceOverlay" class="snake-overlay">
+                <div style="font-size: 50px; margin-bottom: 10px;" id="spaceOverlayIcon">🚀</div>
+                <h2 id="spaceOverlayTitle" style="font-size: 26px; margin-bottom: 6px;">Launch Mission</h2>
+                <p id="spaceOverlaySubtitle" style="color: var(--muted); font-size: 13px; margin-bottom: 20px;">Use Left/Right arrow keys, A/D or mouse to steer</p>
+                <button id="startSpaceBtn" class="game-btn">
+                    LAUNCH SHIP →
+                </button>
+            </div>
+        </div>
+
+        <div style="display:flex; gap:12px; justify-content:center; margin-top:20px;">
             <a href="../leaderboard.php" class="btn secondary" style="display:inline-flex;">
-                LEADERBOARD →
+                VIEW LEADERBOARD →
             </a>
         </div>
     </div>
 
 </main>
 
-<script src="../js/tic-tac-toe.js"></script>
+<script src="../js/space-dodger.js"></script>
 
 </body>
 </html>

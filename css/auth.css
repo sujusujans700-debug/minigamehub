@@ -1,569 +1,313 @@
 /* =========================================================
-   AUTH PAGES
+   AUTH PAGES - CYBERPUNK DARK AURORA THEME
    ========================================================= */
 
 .auth-page {
-
     min-height: 100vh;
-
     background:
-
-        radial-gradient(
-            circle at 15% 50%,
-            rgba(184, 255, 44, 0.08),
-            transparent 30%
-        ),
-
-        #08090b;
-
+        radial-gradient(ellipse 70% 50% at 20% 40%, rgba(139, 92, 246, 0.22), transparent 70%),
+        radial-gradient(ellipse 60% 40% at 85% 70%, rgba(6, 182, 212, 0.16), transparent 60%),
+        #080913;
+    background-attachment: fixed;
+    color: #f5f5f5;
 }
-
 
 .auth-wrapper {
-
     min-height: 100vh;
-
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     align-items: center;
-
     max-width: 1200px;
-
     margin: auto;
-
     padding: 50px;
-
     gap: 80px;
-
 }
-
 
 /* =========================================================
    LEFT SIDE
    ========================================================= */
 
 .auth-info {
-
     position: relative;
-
 }
-
 
 .auth-info .logo {
-
     position: absolute;
-
     top: -100px;
-
     left: 0;
-
 }
-
 
 .auth-emoji {
-
     font-size: 90px;
-
     margin-bottom: 30px;
-
-    animation:
-        authFloat 3s ease-in-out infinite;
-
+    animation: authFloat 3s ease-in-out infinite;
 }
-
 
 .auth-info h1 {
-
     font-size: clamp(55px, 7vw, 95px);
-
     line-height: 0.9;
-
     letter-spacing: -6px;
-
 }
-
 
 .auth-info h1 span {
-
     color: var(--accent);
-
+    text-shadow: 0 0 30px rgba(184, 255, 44, 0.35);
 }
-
 
 .auth-info p {
-
     max-width: 450px;
-
     color: var(--muted);
-
     line-height: 1.8;
-
     margin-top: 30px;
-
     font-size: 16px;
-
 }
-
 
 /* =========================================================
    AUTH CARD
    ========================================================= */
 
 .auth-card {
-
-    background: rgba(17, 19, 24, 0.92);
-
-    border: 1px solid var(--border);
-
+    background: rgba(16, 18, 30, 0.85);
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    backdrop-filter: blur(20px);
     border-radius: 24px;
-
     padding: 45px;
-
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.35);
-
-    animation:
-        authAppear 0.7s ease;
-
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 40px rgba(139, 92, 246, 0.1);
+    animation: authAppear 0.7s ease;
 }
-
 
 .auth-top {
-
     font-family: "DM Mono", monospace;
-
     font-size: 10px;
-
     letter-spacing: 1px;
-
     color: var(--muted);
-
     display: flex;
-
     align-items: center;
-
     gap: 8px;
-
 }
-
 
 .status-dot {
-
-    width: 7px;
-
-    height: 7px;
-
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-
     background: var(--accent);
-
-    box-shadow:
-        0 0 12px var(--accent);
-
+    box-shadow: 0 0 12px var(--accent);
 }
-
 
 .auth-card h2 {
-
     font-size: 42px;
-
     letter-spacing: -2px;
-
     margin-top: 20px;
-
 }
-
 
 .auth-description {
-
     color: var(--muted);
-
     margin: 8px 0 30px;
-
 }
-
 
 /* =========================================================
    FORM
    ========================================================= */
 
 .auth-card form {
-
     display: flex;
-
     flex-direction: column;
-
     gap: 20px;
-
 }
-
 
 .auth-card label {
-
     color: var(--muted);
-
     font-family: "DM Mono", monospace;
-
     font-size: 10px;
-
     letter-spacing: 1px;
-
 }
-
 
 .auth-card input {
-
     width: 100%;
-
     margin-top: 8px;
-
     padding: 16px;
-
-    background: #0c0e12;
-
+    background: rgba(11, 13, 23, 0.9);
     border: 1px solid var(--border);
-
-    border-radius: 10px;
-
+    border-radius: 12px;
     color: var(--text);
-
     outline: none;
-
     transition: 0.25s ease;
-
 }
-
 
 .auth-card input:focus {
-
     border-color: var(--accent);
-
-    box-shadow:
-        0 0 0 3px rgba(
-            184,
-            255,
-            44,
-            0.08
-        );
-
+    box-shadow: 0 0 0 3px rgba(184, 255, 44, 0.12);
 }
-
 
 /* =========================================================
    PASSWORD
    ========================================================= */
 
 .password-box {
-
     position: relative;
-
 }
-
 
 .password-box input {
-
     padding-right: 70px;
-
 }
-
 
 .password-box button {
-
     position: absolute;
-
-    right: 10px;
-
+    right: 12px;
     top: 50%;
-
     transform: translateY(-35%);
-
     background: transparent;
-
     border: 0;
-
     color: var(--accent);
-
     cursor: pointer;
-
-    font-size: 9px;
-
+    font-size: 10px;
+    font-weight: 700;
 }
-
 
 /* =========================================================
    ERROR
    ========================================================= */
 
 .error-message {
-
-    padding: 13px;
-
+    padding: 14px;
     margin-bottom: 20px;
-
-    border-radius: 9px;
-
-    background: rgba(
-        255,
-        77,
-        103,
-        0.08
-    );
-
-    border: 1px solid rgba(
-        255,
-        77,
-        103,
-        0.3
-    );
-
+    border-radius: 10px;
+    background: rgba(255, 77, 103, 0.12);
+    border: 1px solid rgba(255, 77, 103, 0.35);
     color: #ff7185;
-
     font-size: 13px;
-
 }
-
 
 /* =========================================================
    SUBMIT
    ========================================================= */
 
 .auth-submit {
-
     margin-top: 5px;
-
     padding: 16px;
-
     border: none;
-
-    border-radius: 10px;
-
+    border-radius: 12px;
     background: var(--accent);
-
     color: #08090b;
-
     font-weight: 700;
-
     cursor: pointer;
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: center;
-
     transition: 0.25s ease;
-
+    box-shadow: 0 4px 20px rgba(184, 255, 44, 0.25);
 }
-
 
 .auth-submit:hover {
-
     transform: translateY(-3px);
-
-    box-shadow:
-        0 10px 30px rgba(
-            184,
-            255,
-            44,
-            0.15
-        );
-
+    box-shadow: 0 10px 30px rgba(184, 255, 44, 0.35);
 }
-
 
 .auth-submit span {
-
     font-size: 20px;
-
 }
-
 
 /* =========================================================
    DIVIDER
    ========================================================= */
 
 .auth-divider {
-
     text-align: center;
-
     margin: 30px 0 20px;
-
     color: var(--muted);
-
     font-family: "DM Mono", monospace;
-
-    font-size: 9px;
-
+    font-size: 10px;
 }
-
 
 /* =========================================================
    LINKS
    ========================================================= */
 
 .create-account {
-
     display: block;
-
     text-align: center;
-
     color: var(--accent);
-
-    font-size: 12px;
-
+    font-size: 13px;
     font-weight: 700;
-
 }
-
 
 .back-home {
-
     display: block;
-
     text-align: center;
-
     margin-top: 25px;
-
     color: var(--muted);
-
     font-size: 12px;
-
 }
-
 
 .back-home:hover {
-
     color: var(--text);
-
 }
-
 
 /* =========================================================
    ANIMATIONS
    ========================================================= */
 
 @keyframes authAppear {
-
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(30px)
-            scale(0.97);
-
+        transform: translateY(30px) scale(0.97);
     }
-
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-
+        transform: translateY(0) scale(1);
     }
-
 }
-
 
 @keyframes authFloat {
-
-    0%,
-    100% {
-
-        transform:
-            translateY(0)
-            rotate(0deg);
-
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
     }
-
     50% {
-
-        transform:
-            translateY(-15px)
-            rotate(4deg);
-
+        transform: translateY(-15px) rotate(4deg);
     }
-
 }
-
 
 /* =========================================================
    MOBILE
    ========================================================= */
 
 @media (max-width: 850px) {
-
     .auth-wrapper {
-
         grid-template-columns: 1fr;
-
         padding: 30px 20px;
-
         gap: 40px;
-
     }
-
 
     .auth-info {
-
         text-align: center;
-
     }
-
 
     .auth-info .logo {
-
         position: static;
-
         display: block;
-
         margin-bottom: 50px;
-
     }
-
 
     .auth-info p {
-
         margin-left: auto;
-
         margin-right: auto;
-
     }
-
 
     .auth-emoji {
-
         font-size: 65px;
-
     }
-
 
     .auth-info h1 {
-
         font-size: 60px;
-
     }
-
 }
 
-
 @media (max-width: 500px) {
-
     .auth-card {
-
         padding: 30px 20px;
-
     }
-
 
     .auth-card h2 {
-
         font-size: 34px;
-
     }
-
 }

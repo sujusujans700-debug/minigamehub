@@ -2,10 +2,10 @@
     {
         "id": "quiz",
         "name": "Quick Quiz",
-        "description": "Test your knowledge with fast and challenging questions.",
+        "description": "Test your general and programming knowledge against a 15-second clock.",
         "icon": "🧠",
         "url": "games/quiz.php",
-        "category": "Knowledge",
+        "category": "Trivia",
         "difficulty": "Medium",
         "players": "1 Player",
         "status": "active"
@@ -13,8 +13,8 @@
     {
         "id": "tic-tac-toe",
         "name": "Tic Tac Toe",
-        "description": "Challenge the computer in the classic X and O battle.",
-        "icon": "⭕",
+        "description": "Challenge the smart computer AI in the classic 3x3 strategy battle.",
+        "icon": "❌⭕",
         "url": "games/tic-tac-toe.php",
         "category": "Strategy",
         "difficulty": "Easy",
@@ -24,8 +24,8 @@
     {
         "id": "memory",
         "name": "Memory Match",
-        "description": "Flip cards and match all the hidden pairs.",
-        "icon": "🧩",
+        "description": "Flip and match all 8 hidden pairs with minimum moves and seconds.",
+        "icon": "🃏",
         "url": "games/memory.php",
         "category": "Puzzle",
         "difficulty": "Medium",
@@ -35,11 +35,77 @@
     {
         "id": "guess",
         "name": "Guess It",
-        "description": "Can you find the secret number before running out of attempts?",
-        "icon": "🎯",
+        "description": "Find the secret hidden number between 1 and 100 with fewer attempts.",
+        "icon": "🔢",
         "url": "games/guess.php",
-        "category": "Challenge",
+        "category": "Logic",
         "difficulty": "Easy",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "snake",
+        "name": "Snake Arcade",
+        "description": "Navigate the growing snake, eat golden apples, and avoid walls.",
+        "icon": "🐍",
+        "url": "games/snake.php",
+        "category": "Arcade",
+        "difficulty": "Hard",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "whack-a-mole",
+        "name": "Whack-a-Mole",
+        "description": "Fast-paced reflex test! Whack moles, avoid bombs, and build combos.",
+        "icon": "🔨",
+        "url": "games/whack-a-mole.php",
+        "category": "Reflex",
+        "difficulty": "Medium",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "rps",
+        "name": "Rock Paper Scissors",
+        "description": "Battle the AI in a Best-of-5 tournament series with bonus victory points.",
+        "icon": "✊✋✌️",
+        "url": "games/rps.php",
+        "category": "PvE",
+        "difficulty": "Easy",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "space-dodger",
+        "name": "Space Dodger",
+        "description": "Pilot your spaceship through asteroid fields and collect powerup stars.",
+        "icon": "🚀",
+        "url": "games/space-dodger.php",
+        "category": "Action",
+        "difficulty": "Hard",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "2048",
+        "name": "2048 Puzzle",
+        "description": "Slide matching number tiles across the 4x4 grid to create the 2048 tile.",
+        "icon": "🔢",
+        "url": "games/2048.php",
+        "category": "Puzzle",
+        "difficulty": "Hard",
+        "players": "1 Player",
+        "status": "active"
+    },
+    {
+        "id": "typing",
+        "name": "Typing Speed Test",
+        "description": "Measure your words per minute (WPM) and typing accuracy against the clock.",
+        "icon": "⌨️",
+        "url": "games/typing.php",
+        "category": "Speed",
+        "difficulty": "Medium",
         "players": "1 Player",
         "status": "active"
     }
